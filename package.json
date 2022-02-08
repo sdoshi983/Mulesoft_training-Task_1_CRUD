@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sdoshi983/Mulesoft_training-Task_1_CRUD/issues"
   },
-  "homepage": "https://github.com/sdoshi983/Mulesoft_training-Task_1_CRUD#readme"
+  "homepage": "https://github.com/sdoshi983/Mulesoft_training-Task_1_CRUD#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }

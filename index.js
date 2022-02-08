@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const databaseURL = 'mongodb://localhost:27017/movies'; // database's url to be connected
+const port = process.env.PORT || 3000;
 
 mongoose.connect(databaseURL, {useNewUrlParser: true}).then(() => {
     console.log('connected to database successfully .. !');

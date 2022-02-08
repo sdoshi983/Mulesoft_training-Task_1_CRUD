@@ -14,10 +14,10 @@ router.get('/movie', async (request, response) => {
     });
 });
 
-// fetch by movie
-router.get('/movie/:movieName', async (request, response) => { 
-    const movieName = request.params.movieName;
-    const movie = await Movie.findOne({movieName: movieName});
+// fetch by actor name
+router.get('/movie/:actorName', async (request, response) => { 
+    const actorName = request.params.actorName;
+    const movie = await Movie.findOne({actorName: actorName});
     response.send({
         "message": "Movie details fetched successfully",
         "statusCode": 200,

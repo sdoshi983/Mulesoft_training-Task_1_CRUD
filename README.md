@@ -31,21 +31,20 @@ Follow the following steps:
 ![image](https://user-images.githubusercontent.com/60025677/153027295-71b202ac-8f5b-4e93-988a-4ff6d3d77023.png)
 
 
-- SELECT by movie name:
+- SELECT by actor name:
 
-![image](https://user-images.githubusercontent.com/60025677/153027368-2e1baf51-da7c-4b66-a687-bc923f249ab4.png)
+![image](https://user-images.githubusercontent.com/60025677/153029690-a222769a-a070-47a1-9e90-9e6f6668fb05.png)
 
-
-- Insert:
+- INSERT:
 
 ![image](https://user-images.githubusercontent.com/60025677/153027069-c836de1c-9a55-4a82-b094-56909eeca24f.png)
 
 
-- Update:
+- UPDATE:
 
 ![image](https://user-images.githubusercontent.com/60025677/153027641-80b2918a-d237-4544-8637-c47f4838f41a.png)
 
-- Delete:
+- DELETE:
 
 ![image](https://user-images.githubusercontent.com/60025677/153027896-1841778e-3fa1-4095-9d31-ea47c42371c6.png)
 

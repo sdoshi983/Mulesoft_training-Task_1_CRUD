@@ -27,4 +27,14 @@ router.patch('/movie/:id', async (request, response) => {    // update
     response.send(movie);
 })
 
+router.delete('/movie/:id', async (request, response) => {   // delete by id
+    try{
+        const _id = request.params.id;
+        const movie = await Movie.findByIdAndDelete(_id);
+        response.send(movie);
+    }catch (e){
+        response.send(e);
+    }
+})
+
 module.exports = router;

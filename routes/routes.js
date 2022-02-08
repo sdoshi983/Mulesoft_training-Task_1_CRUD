@@ -4,34 +4,59 @@ const router = express.Router();
 
 const Movie = require('../models/movie');
 
-router.get('/movie', async (request, response) => {  // fetch
-    const data = await Movie.find();
-    response.send(data);
+// fetch
+router.get('/movie', async (request, response) => { 
+    const movie = await Movie.find();
+    response.send({
+        "message": "All the movies details fetched successfully",
+        "statusCode": 200,
+        "movieDetails": movie
+    });
 });
 
-router.get('/movie/:movieName', async (request, response) => {  // fetch by movie
+// fetch by movie
+router.get('/movie/:movieName', async (request, response) => { 
     const movieName = request.params.movieName;
-    const data = await Movie.findOne({movieName: movieName});
-    response.send(data);
+    const movie = await Movie.findOne({movieName: movieName});
+    response.send({
+        "message": "Movie details fetched successfully",
+        "statusCode": 200,
+        "movieDetails": movie
+    });
 });
 
-router.post('/movie', async (request, response) => {    // insert
+// insert
+router.post('/movie', async (request, response) => {    
     const movie = new Movie(request.body);
     await movie.save();
-    response.send(movie);
+    response.send({
+        "message": "Data inserted successfully",
+        "statusCode": 200,
+        "movieDetails": movie
+    });
 })
 
-router.patch('/movie/:id', async (request, response) => {    // update
+// update
+router.patch('/movie/:id', async (request, response) => {    
     const _id = request.params.id;
     const movie = await Movie.findByIdAndUpdate(_id, request.body, {new: true});
-    response.send(movie);
+    response.send({
+        "message": "Movies details updated successfully",
+        "statusCode": 200,
+        "movieDetails": movie
+    });
 })
 
-router.delete('/movie/:id', async (request, response) => {   // delete by id
+// delete a single record
+router.delete('/movie/:id', async (request, response) => {   
     try{
         const _id = request.params.id;
         const movie = await Movie.findByIdAndDelete(_id);
-        response.send(movie);
+        response.send({
+            "message": "Movie deleted successfully",
+            "statusCode": 200,
+            "movieDetails": movie
+        });
     }catch (e){
         response.send(e);
     }

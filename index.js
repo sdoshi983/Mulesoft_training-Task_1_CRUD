@@ -7,4 +7,6 @@ const databaseURL = 'mongodb://localhost:27017/movies'; // database's url to be 
 
 mongoose.connect(databaseURL, {useNewUrlParser: true}).then(() => {
     console.log('connected to database successfully .. !');
+}).catch((exception) => {
+    console.log(exception.toString());
 })

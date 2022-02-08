@@ -1,0 +1,20 @@
+{
+  "name": "mulesoft_training-task_1_crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdoshi983/Mulesoft_training-Task_1_CRUD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdoshi983/Mulesoft_training-Task_1_CRUD/issues"
+  },
+  "homepage": "https://github.com/sdoshi983/Mulesoft_training-Task_1_CRUD#readme"
+}

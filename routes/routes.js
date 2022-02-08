@@ -15,10 +15,15 @@ router.get('/movie/:movieName', async (request, response) => {  // fetch by movi
     response.send(data);
 });
 
-
 router.post('/movie', async (request, response) => {    // insert
     const movie = new Movie(request.body);
     await movie.save();
+    response.send(movie);
+})
+
+router.patch('/movie/:id', async (request, response) => {    // update
+    const _id = request.params.id;
+    const movie = await Movie.findByIdAndUpdate(_id, request.body, {new: true});
     response.send(movie);
 })
 

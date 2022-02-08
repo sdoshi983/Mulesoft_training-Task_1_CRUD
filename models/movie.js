@@ -9,4 +9,4 @@ const movieSchema = mongoose.Schema({
     yearOfRelease: Number,
 });
 
-module.exports = mongoose.model('Detail', materialSchema);
+module.exports = mongoose.model('Detail', movieSchema);
